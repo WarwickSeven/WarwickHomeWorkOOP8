@@ -30,12 +30,11 @@ int main() {
     do {
         std::cout << "n: ";
         std::cin >> n;
-       try {
+        try {
            p1.setBar(n);
-       } catch (const char * a) {
+        } catch (const char * a) {
            std::cerr << a << std::endl;
-       }
-        
+        }
     } while (n!=0);
     return 0;
 }
