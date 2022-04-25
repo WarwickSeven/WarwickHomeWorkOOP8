@@ -1,3 +1,4 @@
+//lesson H Task 2
 #include <iostream>
 
 class Ex {
