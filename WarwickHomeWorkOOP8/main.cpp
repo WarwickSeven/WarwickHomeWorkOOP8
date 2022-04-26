@@ -31,9 +31,7 @@ public:
 };
 
 void Robot::move(char m) {
-    if ((m != 'w') || (m != 's') || (m != 'a') || (m != 'd') || (m != 'e')) {
-        throw IllegalCommands("incorrect input");
-    } else {
+    if ((m=='w') || (m=='s') || (m=='a') || (m=='d') || (m=='e')) {
         switch (m) {
             case ('w'):
                 if (m_y == 1)
@@ -55,11 +53,15 @@ void Robot::move(char m) {
                 break;
             case ('d'):
                 if (m_x == 10)
-                    throw OffTheField("You can't go Up");
+                    throw OffTheField("You can't go Right");
                 else
-                    m_y++;
+                    m_x++;
                 break;
+            case ('e'):
+                std::cout << "Game over" << std::endl;
         }
+    } else {
+        throw IllegalCommands("incorrect input");
     }
 }
 
