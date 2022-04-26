@@ -71,7 +71,7 @@ int main() {
     
     do {
         r1.getCoord();
-        std::cout << "Where to move W(Up),S(Down),A(Left),D(Right),E(exit): ";
+        std::cout << "Where to move w(Up), s(Down), a(Left), d(Right), e(exit): ";
         std::cin >> move;
         try {
             r1.move(move);
